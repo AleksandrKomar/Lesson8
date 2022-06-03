@@ -6,7 +6,7 @@ public class Bank {
 
     static boolean nePogashen = true;
     static int credit = 700;
-    static int debt = 0; //долг
+    static int debt = 0; //РґРѕР»Рі
     static int overpayment = 0;
 
     public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class Bank {
         Scanner input = new Scanner(System.in);
 
         do {
-            System.out.print("Введите сумму погашения кредита = ");
+            System.out.print("Р’РІРµРґРёС‚Рµ СЃСѓРјРјСѓ РїРѕРіР°С€РµРЅРёСЏ РєСЂРµРґРёС‚Р° = ");
 
             int a = input.nextInt();
 
@@ -28,19 +28,19 @@ public class Bank {
 
         if (money > credit) {
             overpayment = money - credit;
-            System.out.println("Переплата по кредиту составила " + overpayment + " грн");
-            System.out.println("Кредит погашен");
+            System.out.println("РџРµСЂРµРїР»Р°С‚Р° РїРѕ РєСЂРµРґРёС‚Сѓ СЃРѕСЃС‚Р°РІРёР»Р° " + overpayment + " РіСЂРЅ");
+            System.out.println("РљСЂРµРґРёС‚ РїРѕРіР°С€РµРЅ");
             nePogashen = false;
 
         } else if (money == credit) {
             credit -= money;
-            System.out.println("Кредит погашен");
+            System.out.println("РљСЂРµРґРёС‚ РїРѕРіР°С€РµРЅ");
             nePogashen = false;
         } else {
 
             debt = credit - money;
             credit -= money;
-            System.out.println("Задолженность по кредиту составляет " + debt + " грн");
+            System.out.println("Р—Р°РґРѕР»Р¶РµРЅРЅРѕСЃС‚СЊ РїРѕ РєСЂРµРґРёС‚Сѓ СЃРѕСЃС‚Р°РІР»СЏРµС‚ " + debt + " РіСЂРЅ");
         }
     }
 
